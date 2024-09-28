@@ -83,7 +83,9 @@ ___
 
 ```{r}
 # males versus females
-
+HELPrct %>%
+  group_by(sex) %>%
+  summarise(n(), sum(e2b, na.rm=TRUE), mean(daysanysub, na.rm=TRUE))
 ```
 
 
@@ -91,30 +93,39 @@ ___
 
 ```{r}
 # homeless or not
-
+HELPrct %>%
+  group_by(homeless) %>%
+  summarise(n(), sum(e2b, na.rm=TRUE), mean(daysanysub, na.rm=TRUE))
 ```
 
 3. *substance*
 
 ```{r}
 # substance
-
+HELPrct %>%
+  group_by(substance) %>%
+  summarise(n(), sum(e2b, na.rm=TRUE), mean(daysanysub, na.rm=TRUE))
 ```
 
 4. *break down the homeless versus housed further, by sex*
 
 ```{r}
 # homeless versus housed broken down by sex
-
+HELPrct %>%
+  group_by(homeless, sex) %>%
+  summarise(n(), sum(e2b, na.rm=TRUE), mean(daysanysub, na.rm=TRUE))
 ```
 
 5. *break down the homeless versus housed further, by substance*
 
 ```{r}
 # homeless versus housed broken down by substance
-
+HELPrct %>%
+  group_by(homeless, substance) %>%
+  summarise(n(), sum(e2b, na.rm=TRUE), mean(daysanysub, na.rm=TRUE))
 ```
 
+___
 
 
 ## TASK 4:
