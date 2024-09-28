@@ -31,7 +31,13 @@ data("HELPrct", package = "mosaicData")
 
 [hint: you can use the help in RStudio here since the data were loaded from an R package]
 
+```{r}
+help(HELPrct)
+```
 
+The 'HELPrct' data are collected form a total of 453 patients from a detoxification unit. Variables involve physical and mental health factors, with a focus on the patients' use of drugs (alcohol, cocaine, heroin) and their treatment.
+
+___
 
 
 ## Basic Summaries with `summarise()` 
