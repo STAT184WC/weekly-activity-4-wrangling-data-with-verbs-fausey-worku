@@ -87,6 +87,7 @@ HELPrct %>%
   group_by(sex) %>%
   summarise(n(), sum(e2b, na.rm=TRUE), mean(daysanysub, na.rm=TRUE))
 ```
+It is apparent that substance abuse is much more common among males than females (or they are just seeking detox more), and although their time to use since detox is fairly close, males still generally appear to relapse sooner.
 
 
 2. *homeless or not*
@@ -97,6 +98,8 @@ HELPrct %>%
   group_by(homeless) %>%
   summarise(n(), sum(e2b, na.rm=TRUE), mean(daysanysub, na.rm=TRUE))
 ```
+The homeless and housed appear to be close in numbers, although we see slightly more housed than homeless. Though, the homeless enter more than twice the number of detox programs than the housed.
+
 
 3. *substance*
 
@@ -106,6 +109,8 @@ HELPrct %>%
   group_by(substance) %>%
   summarise(n(), sum(e2b, na.rm=TRUE), mean(daysanysub, na.rm=TRUE))
 ```
+Alcohol appears to have the most cases in this study, though cocaine s not far behind, with heroin not far behind it too. It looks like cocaine users tend not to seek detoxification nearly as much as those addicted to alcohol or heroin. It also appears that a heroin user is more likely to relapse sooner than a user of the other two drugs.
+
 
 4. *break down the homeless versus housed further, by sex*
 
@@ -115,6 +120,8 @@ HELPrct %>%
   group_by(homeless, sex) %>%
   summarise(n(), sum(e2b, na.rm=TRUE), mean(daysanysub, na.rm=TRUE))
 ```
+From this data, it is apparent that homeless males make up the majority of detox participants.
+
 
 5. *break down the homeless versus housed further, by substance*
 
@@ -124,6 +131,8 @@ HELPrct %>%
   group_by(homeless, substance) %>%
   summarise(n(), sum(e2b, na.rm=TRUE), mean(daysanysub, na.rm=TRUE))
 ```
+This data shows that alcohol abuse is more common among the homeless, whereas the hard drug use is more common among the housed.
+
 
 ___
 
