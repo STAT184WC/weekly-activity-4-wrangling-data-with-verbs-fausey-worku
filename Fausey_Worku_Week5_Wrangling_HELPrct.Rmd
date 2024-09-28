@@ -7,6 +7,8 @@ output:
   html_notebook:
     fig_height: 3
     fig_width: 5
+editor_options: 
+  chunk_output_type: inline
 ---
 
 ```{r message=FALSE}
@@ -23,6 +25,8 @@ data("HELPrct", package = "mosaicData")
 
 # Use View(HELPrct) in the console to open a tab in RStudio and look at the raw data directly
 ```
+
+___
 
 
 ## Data Description
@@ -50,11 +54,25 @@ ___
 
 
 
-```{r}
-
+```{r message=FALSE}
+# 1.
+HELPrct %>%
+  summarise(n())
 ```
 
+```{r message=FALSE}
+# 2.
+HELPrct %>%
+  summarise(sum(e2b, na.rm=TRUE))
+```
 
+```{r message=FALSE}
+# 3.
+HELPrct %>%
+  summarise(mean(daysanysub, na.rm=TRUE))
+```
+
+___
 
 
 ## Subgrouping with `group_by()` 
