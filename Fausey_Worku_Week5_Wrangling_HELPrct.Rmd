@@ -1,8 +1,8 @@
 ---
 title: "Data wrangling - HELPrct"
 subtitle: "Week 5 Activity"
-author: "Author 1 and Author 2"
-date: ""
+author: "Branson T Fausey"
+date: "29 Sept. 2024"
 output: 
   html_notebook:
     fig_height: 3
